@@ -27,12 +27,20 @@
         
         <div class="container" id="navbar-main">
             <div class="row">
-                <div class="col-xs-5 about">
-                    About
-                </div>
-                <div class="col-xs-2 company-logo"><img src="<?php bloginfo('template_directory');?>/dist/img/coloredcow-logo.png" alt="Colored Cow"></div>
-                <div class="col-xs-5 contact">
-                    Contact
-                </div>
+                <a href="<?php echo esc_url(get_permalink(get_page_by_title('About')));?>">
+                    <div class="col-xs-5 about">
+                        About
+                    </div>
+                </a> 
+                <a href="<?php echo esc_url(home_url('/'));?>">
+                    <div class="col-xs-2 company-logo">
+                        <img src="<?php bloginfo('template_directory');?>/dist/img/coloredcow-logo.png" alt="Colored Cow">
+                    </div>
+                </a>
+                <a href="<?php echo esc_url(get_permalink(get_page_by_title('Contact')));?>">
+                    <div class="col-xs-5 contact">
+                        Contact
+                    </div>
+                </a>
             </div>
         </div>

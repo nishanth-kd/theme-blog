@@ -23,7 +23,6 @@ body{
 #navbar-main{
 	padding: 1em;
 	font-size:1.5em;
-	background-color: $background-grey; 
 	position: fixed;
 	width:100%;
 	color: $font-grey;
@@ -32,6 +31,7 @@ body{
 	top:0;
 	z-index: 1000;
 	.about, .contact{
+		color: $font-grey;
 		&:hover{
 			color: $color-5;
 		}
@@ -68,17 +68,17 @@ body{
   		transition: all 0.2s ease-in-out;
 		border-radius: 3px;
   		font-family: 'HelveticaNeueLt', Helvetica,Arial,sans-serif;
-  		&>.title{
+  		.title{
   			font-family: 'HelveticaNeueMed', Helvetica,Arial,sans-serif;
 			font-size: 3em;
 			font-weight: bold;
 			margin-bottom: 0.5em;
   		}
-  		&>.time{
+  		.time{
   			font-weight: bold;
 			font-size: 1.5em;
   		}
-  		&>.excerpt{
+  		.excerpt{
 			font-size: 1.5em;
   		}
   		&:hover{
@@ -99,19 +99,19 @@ body{
 		margin-bottom:2em;
 		border-radius: 3px;
 		box-shadow: rgba(0, 0, 0, 0.121569) 0px 4px 4px;
-		&>.title{
+		.title{
 			font-family: 'HelveticaNeueMed', Helvetica,Arial,sans-serif;
 			font-size: 3em;
 			text-align:center;
 			padding: 0 10%;
 		}
-		&>.time{
+		.time{
 			font-family: 'HelveticaNeueBd', Helvetica,Arial,sans-serif;
 			font-size: 1em;
 			text-align:center;
 			font-weight: bold;
 		}
-		&>.content>p{
+		.content>p{
 			font-family: 'HelveticaNeueLt', Helvetica,Arial,sans-serif;
 			font-size: 1.2em;
 			text-align:center;
