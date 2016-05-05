@@ -1,0 +1,15 @@
+# Add NPM node_modules to gitignore
+/node_modules
+
+# Remove map files
+*.map
+
+# Remove compiled files
+/style.css
+/main.js
+/dist/css
+/dist/js
+
+# Sass cache
+
+/.sass-cache
