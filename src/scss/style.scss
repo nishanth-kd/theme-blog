@@ -1,0 +1,128 @@
+/**
+ *  Theme Name: Nishanth KD blog theme  
+ *  Theme URI: http://nishanthkd.com
+ *	Author: Nishanth KD
+ *	Author URI: http://nishanthkd.com
+ *	Description: Wordpress theme for nishanthkd.com
+ *	Version: 1.0
+ *	License: GNU General Public License v2 or later
+ *	License URI: www.gnu.org/licenses/gpl-2.0.html
+ *	Tags: 
+ *	Text Domain: nishanthkd-theme
+ * 
+ */
+
+@import "colors";
+@import "masonary";
+@import "fonts";
+
+body{
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+#navbar-main{
+	padding: 1em;
+	font-size:1.5em;
+	background-color: $background-grey; 
+	position: fixed;
+	width:100%;
+	color: $font-grey;
+	font-weight: bold;
+	cursor:pointer;
+	top:0;
+	z-index: 1000;
+	.about, .contact{
+		&:hover{
+			color: $color-5;
+		}
+	}
+	.about{
+		text-align: right;
+	}
+	.contact{
+		text-align: left;
+	}
+	.company-logo{
+		text-align: center;
+		&>img{
+			height: 2em;
+		}
+		&:hover{
+			
+		}
+	}
+}
+
+.col-padding-custom{
+	padding: 0 0.5em;
+}
+
+#blogs-listing{
+	margin-top: 7em;
+	width:100%;
+	.blog-entry{
+		padding: 2em;
+		width:100%;
+		margin:0.5em 0em;
+		color: rgba(255,255,255, 0.9);
+  		transition: all 0.2s ease-in-out;
+		border-radius: 3px;
+  		font-family: 'HelveticaNeueLt', Helvetica,Arial,sans-serif;
+  		&>.title{
+  			font-family: 'HelveticaNeueMed', Helvetica,Arial,sans-serif;
+			font-size: 3em;
+			font-weight: bold;
+			margin-bottom: 0.5em;
+  		}
+  		&>.time{
+  			font-weight: bold;
+			font-size: 1.5em;
+  		}
+  		&>.excerpt{
+			font-size: 1.5em;
+  		}
+  		&:hover{
+  			text-decoration: none;
+  			box-shadow: rgba(0, 0, 0, 0.121569) 0px 1px 1px;
+  		}
+	}
+}
+
+#blog-single{
+	width:100%;
+	min-height:100vh;
+	.blog-content{
+		padding: 2em 4em;
+		background-color: #fff;
+		color: #000;
+		margin-top:7em;
+		margin-bottom:2em;
+		border-radius: 3px;
+		box-shadow: rgba(0, 0, 0, 0.121569) 0px 4px 4px;
+		&>.title{
+			font-family: 'HelveticaNeueMed', Helvetica,Arial,sans-serif;
+			font-size: 3em;
+			text-align:center;
+			padding: 0 10%;
+		}
+		&>.time{
+			font-family: 'HelveticaNeueBd', Helvetica,Arial,sans-serif;
+			font-size: 1em;
+			text-align:center;
+			font-weight: bold;
+		}
+		&>.content>p{
+			font-family: 'HelveticaNeueLt', Helvetica,Arial,sans-serif;
+			font-size: 1.2em;
+			text-align:center;
+			line-height: 1.5em;
+		}
+	}
+}
+
+a:hover, a:active, a:visited, a:focus{
+	text-decoration: none;
+}
+	
+
+	
