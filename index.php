@@ -2,16 +2,11 @@
 /**
  * The main template file
  **/
-
 ?>
-
-<?php get_header(); ?>
 
 <?php
 /**
- * Content Here
+ * Silence is Golden
  */
 ?>
-
-<?php get_footer(); ?>
 

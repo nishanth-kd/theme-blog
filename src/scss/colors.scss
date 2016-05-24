@@ -6,12 +6,12 @@ $font-black: #000;
 $random-theme-color : red;
 
 $color-1: #16528e;
-$color-2: #a2c5bf;
+$color-2: #673AB7;
 $color-3: #e8846b;
-$color-4: #167c80;
+$color-4: #00695C;
 $color-5: #e54b4b;
-$color-6: #546E7A;
-$color-7: #8D6E63;
+$color-6: #455A64;
+$color-7: #795548;
 
 .color-1{
 	color: $color-1;
@@ -35,24 +35,136 @@ $color-7: #8D6E63;
 	color: $color-7;
 }
 
+.comment-color-1{
+	cite, .comment-reply-link, .commentmetadata>a {
+		color: $color-1;
+		font-style: normal;
+	}
+	.avatar{
+		border: 1px solid $color-1;
+	}
+}
+.comment-color-2{
+	cite, .comment-reply-link, .commentmetadata>a {
+		color: $color-2;
+		font-style: normal;
+	}
+	.avatar{
+		border: 1px solid $color-2;
+	}
+}
+.comment-color-3{
+	cite, .comment-reply-link, .commentmetadata>a {
+		color: $color-3;
+		font-style: normal;
+	}
+	.avatar{
+		border: 1px solid $color-3;
+	}
+}
+.comment-color-4{
+	cite, .comment-reply-link, .commentmetadata>a {
+		color: $color-4;
+		font-style: normal;
+	}
+	.avatar{
+		border: 1px solid $color-4;
+	}
+}
+.comment-color-5{
+	cite, .comment-reply-link, .commentmetadata>a {
+		color: $color-5;
+		font-style: normal;
+	}
+	.avatar{
+		border: 1px solid $color-5;
+	}
+}
+.comment-color-6{
+	cite, .comment-reply-link, .commentmetadata>a {
+		color: $color-6;
+		font-style: normal;
+	}
+	.avatar{
+		border: 1px solid $color-6;
+	}
+}
+.comment-color-7{
+	cite, .comment-reply-link, .commentmetadata>a {
+		color: $color-7;
+		font-style: normal;
+	}
+	.avatar{
+		border: 1px solid $color-7;
+	}
+}
 .background-color-1{
+	color: #fff;
+	opacity: 0.9;
 	background-color: $color-1;
+	transition: all 0.2s ease-in-out;
+	&:hover{
+  		text-decoration: none;
+  		opacity:1;
+  	}
 }
 .background-color-2{
+	color: #fff;
+	opacity: 0.9;
 	background-color: $color-2;
+	transition: all 0.2s ease-in-out;
+	&:hover{
+  		text-decoration: none;
+  		opacity:1;
+  	}
 }
 .background-color-3{
+	color: #fff;
+	opacity: 0.9;
 	background-color: $color-3;
+	transition: all 0.2s ease-in-out;
+	&:hover{
+  		text-decoration: none;
+  		opacity:1;
+  	}
 }
 .background-color-4{
+	color: #fff;
+	opacity: 0.9;
 	background-color: $color-4;
+	transition: all 0.2s ease-in-out;
+	&:hover{
+  		text-decoration: none;
+  		opacity:1;
+  	}
 }
 .background-color-5{
+	color: #fff;
+	opacity: 0.9;
 	background-color: $color-5;
+	transition: all 0.2s ease-in-out;
+	&:hover{
+  		text-decoration: none;
+  		opacity:1;
+  	}
 }
 .background-color-6{
+	color: #fff;
+	opacity: 0.9;
 	background-color: $color-6;
+	transition: all 0.2s ease-in-out;
+	&:hover{
+  		text-decoration: none;
+  		opacity:1;
+  	}
 }
 .background-color-7{
+	color: #fff;
+	opacity: 0.9;
 	background-color: $color-7;
+	transition: all 0.2s ease-in-out;
+	&:hover{
+  		text-decoration: none;
+  		opacity:1;
+  	}
 }

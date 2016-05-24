@@ -5,34 +5,39 @@
 
 ?>
 
-<?php get_header(); ?>
-<script>
-	$( window ).load( function()
-{
-    $( '#list' ).masonry( { itemSelector: '.item' } );
-});
-</script>
+<?php 
+	get_header(); 
+	$color = nishanthkd_var_color();
+?>
+
 <div class="container" id="blogs-listing">
-	<div class="category-grid">
-		<?php 
-			if ( have_posts() ) {
-				while ( have_posts() ) {
-					the_post(); 
-					$color = rand(1, 7);
-					?>
-					<div class="item col-padding-custom">
-						<a href="<?php echo esc_url(the_permalink());?>&mode=<?php echo $color;?>">
-							<div class="blog-entry background-color-<?php echo $color;?>" data-color="<?php $color ?>">
-								<p class="time"><?php the_time('F j, Y');?></p>
-								<p class="title"><?php the_title();?></p>
-								<?php the_excerpt();?>
+	<div class="row">
+		<div class="col-xs-12 col-sm-7 col-md-9">
+			<div class="category-grid">
+				<?php 
+					if ( have_posts() ) {
+						while ( have_posts() ) {
+							the_post(); 
+							?>
+							<div class="item col-padding-custom">
+								<a href="<?php echo esc_url(the_permalink());?>">
+									<div class="blog-entry " data-color="<?php $color ?>">
+										<p class="time"><?php the_time('F j, Y');?></p>
+										<p class="title"><?php the_title();?></p>
+										<?php the_excerpt();?>
+										<p class="color-<?php echo $color;?>">Read More ...</p>
+									</div>
+								</a>
 							</div>
-						</a>
-					</div>
-					<?php
-				} 
-			} 
-		?>
+							<?php
+						} 
+					} 
+				?>
+			</div>
+		</div>
+		<div class="col-xs-12 col-sm-5 col-md-3">
+			<?php get_sidebar(); ?>
+		</div>
 	</div>
 </div>
 

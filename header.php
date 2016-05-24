@@ -19,28 +19,28 @@
 
         <link rel="stylesheet" href="<?php bloginfo('template_directory');?>/dist/lib/css/bootstrap.min.css">
         <link rel="stylesheet" href="<?php bloginfo('template_directory');?>/style.css">
+        <link rel="stylesheet" href="<?php bloginfo('template_directory');?>/dist/css/social-buttons.css">
         <script src="https://npmcdn.com/masonry-layout@4.0/dist/masonry.pkgd.min.js"></script>
-
+        <?php 
+            include_once("analytics-tracking.php"); 
+            $color = rand(1, 7);
+            nishanthkd_var_color($color);
+        ?>
     </head>
     <body>
         <input type="hidden" id="ajax_url" value="<?php echo admin_url('admin-ajax.php'); ?>">
         
         <div class="container" id="navbar-main">
             <div class="row">
-                <a href="<?php echo esc_url(get_permalink(get_page_by_title('About')));?>">
-                    <div class="col-xs-5 about">
-                        About
-                    </div>
-                </a> 
-                <a href="<?php echo esc_url(home_url('/'));?>">
-                    <div class="col-xs-2 company-logo">
-                        <img src="<?php bloginfo('template_directory');?>/dist/img/coloredcow-logo.png" alt="Colored Cow">
-                    </div>
+                <a href="<?php echo home_url();?>">
+                        <div class="col-x:s-8 company-logo">
+                            <p>NISHANTH<span class="color-<?php echo $color;?>">KD</span> <sup><span>The <span class="color-<?php echo $color;?>">Pragmatic</span> Paranoia</span></sup></p>
+                        </div>
                 </a>
-                <a href="<?php echo esc_url(get_permalink(get_page_by_title('Contact')));?>">
-                    <div class="col-xs-5 contact">
-                        Contact
-                    </div>
+                <a href="#">
+                        <div class="col-xs-4 menu">
+                            
+                        </div>
                 </a>
             </div>
         </div>
