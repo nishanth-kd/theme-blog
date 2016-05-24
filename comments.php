@@ -6,12 +6,12 @@
 	<?php if ( have_comments() ) : ?>
 		<h2 class="comments-title">
 			<?php
-				printf( _nx( 'One thought on &ldquo;%1$s&rdquo;', 'Thoughts on &ldquo;%1$s&rdquo;', 'comments title', 'twentyfifteen' ),
+				printf( _nx( 'One thought on &ldquo;%1$s&rdquo;', 'Thoughts on &ldquo;%1$s&rdquo;', 'comments title', 'nishanthkd' ),
 					get_the_title() );
 			?>
 		</h2>
 
-		<?php twentyfifteen_comment_nav(); ?>
+		<?php nishanthkd_comment_nav(); ?>
 
 		<ol class="comment-list comment-color-<?php echo $color; ?>">
 			<?php
@@ -23,7 +23,7 @@
 			?>
 		</ol><!-- .comment-list -->
 
-		<?php twentyfifteen_comment_nav(); ?>
+		<?php nishanthkd_comment_nav(); ?>
 
 	<?php endif; // have_comments() ?>
 
@@ -31,7 +31,7 @@
 		// If comments are closed and there are comments, let's leave a little note, shall we?
 		if ( ! comments_open() && get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
 	?>
-		<p class="no-comments"><?php _e( 'Comments are closed.', 'twentyfifteen' ); ?></p>
+		<p class="no-comments"><?php _e( 'Comments are closed.', 'nishanthkd' ); ?></p>
 	<?php endif; ?>
 
 	<?php 

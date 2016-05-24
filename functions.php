@@ -60,25 +60,25 @@ if ( ! function_exists('nishanthkd_var_color')) {
 	}
 }
 
-if ( ! function_exists( 'twentyfifteen_comment_nav' ) ) :
+if ( ! function_exists( 'nishanthkd_comment_nav' ) ) :
 /**
  * Display navigation to next/previous comments when applicable.
  *
  * @since Twenty Fifteen 1.0
  */
-function twentyfifteen_comment_nav() {
+function nishanthkd_comment_nav() {
 	// Are there comments to navigate through?
 	if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) :
 	?>
 	<nav class="navigation comment-navigation" role="navigation">
-		<h2 class="screen-reader-text"><?php _e( 'Comment navigation', 'twentyfifteen' ); ?></h2>
+		<h2 class="screen-reader-text"><?php _e( 'Comment navigation', 'nishanthkd' ); ?></h2>
 		<div class="nav-links">
 			<?php
-				if ( $prev_link = get_previous_comments_link( __( 'Older Comments', 'twentyfifteen' ) ) ) :
+				if ( $prev_link = get_previous_comments_link( __( 'Older Comments', 'nishanthkd' ) ) ) :
 					printf( '<div class="nav-previous">%s</div>', $prev_link );
 				endif;
 
-				if ( $next_link = get_next_comments_link( __( 'Newer Comments', 'twentyfifteen' ) ) ) :
+				if ( $next_link = get_next_comments_link( __( 'Newer Comments', 'nishanthkd' ) ) ) :
 					printf( '<div class="nav-next">%s</div>', $next_link );
 				endif;
 			?>
