@@ -7,7 +7,7 @@
 
 <?php 
 	get_header(); 
-	$color = nishanthkd_var_color();
+	$color = paranoid_var_color();
 ?>
 
 <div class="container" id="blogs-listing">

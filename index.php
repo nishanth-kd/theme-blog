@@ -4,9 +4,3 @@
  **/
 ?>
 
-<?php
-/**
- * Silence is Golden
- */
-?>
-

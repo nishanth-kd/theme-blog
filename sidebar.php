@@ -1,5 +1,5 @@
 <?php 
-	$color = nishanthkd_var_color();
+	$color = paranoid_var_color();
 ?>
 <div class="sidebar">
 	<div class="thumbnail-photo">
@@ -14,16 +14,16 @@
 		<a href="#" class="social-button">
 			<img src="<?php bloginfo('template_directory');?>/dist/img/social/mail.png" alt="">
 		</a>
-		<a href="#" class="social-button">
+		<a href="https://github.com/nishanth-kd" target="_blank" class="social-button">
 			<img src="<?php bloginfo('template_directory');?>/dist/img/social/github.png" alt="">
 		</a>
-		<a href="#" class="social-button">
+		<a href="#" target="_blank" class="social-button">
 			<img src="<?php bloginfo('template_directory');?>/dist/img/social/linkedin.png" alt="">
 		</a>
-		<a href="#" class="social-button">
+		<a href="https://www.instagram.com/nishanthkd/" target="_blank" class="social-button">
 			<img src="<?php bloginfo('template_directory');?>/dist/img/social/instagram.png" alt="">
 		</a>
-		<a href="#" class="social-button">
+		<a href="https://www.facebook.com/nishanth.kd" target="_blank" class="social-button">
 			<img src="<?php bloginfo('template_directory');?>/dist/img/social/facebook.png" alt="">
 		</a>
 	</div>

@@ -5,10 +5,10 @@
 *.map
 
 # Remove compiled files
-/style.css
-/main.js
-/dist/css
-/dist/js
+#/style.css
+#/main.js
+#/dist/css
+#/dist/js
 
 # Sass cache
 

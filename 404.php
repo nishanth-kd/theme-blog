@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <?php 
-		$color = nishanthkd_var_color();
+		$color = paranoid_var_color();
 		?>
 	<div class="container" id="container-404">
 		<div class="row">

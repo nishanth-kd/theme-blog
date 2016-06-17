@@ -1,17 +1,17 @@
 <?php
-	$color = nishanthkd_var_color();
+	$color = paranoid_var_color();
 ?>
 <div id="comments" class="comments-area">
 
 	<?php if ( have_comments() ) : ?>
 		<h2 class="comments-title">
 			<?php
-				printf( _nx( 'One thought on &ldquo;%1$s&rdquo;', 'Thoughts on &ldquo;%1$s&rdquo;', 'comments title', 'nishanthkd' ),
+				printf( _nx( 'One thought on &ldquo;%1$s&rdquo;', 'Thoughts on &ldquo;%1$s&rdquo;', 'comments title', 'paranoid' ),
 					get_the_title() );
 			?>
 		</h2>
 
-		<?php nishanthkd_comment_nav(); ?>
+		<?php paranoid_comment_nav(); ?>
 
 		<ol class="comment-list comment-color-<?php echo $color; ?>">
 			<?php
@@ -23,7 +23,7 @@
 			?>
 		</ol><!-- .comment-list -->
 
-		<?php nishanthkd_comment_nav(); ?>
+		<?php paranoid_comment_nav(); ?>
 
 	<?php endif; // have_comments() ?>
 
@@ -31,7 +31,7 @@
 		// If comments are closed and there are comments, let's leave a little note, shall we?
 		if ( ! comments_open() && get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
 	?>
-		<p class="no-comments"><?php _e( 'Comments are closed.', 'nishanthkd' ); ?></p>
+		<p class="no-comments"><?php _e( 'Comments are closed.', 'paranoid' ); ?></p>
 	<?php endif; ?>
 
 	<?php 

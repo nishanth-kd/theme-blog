@@ -31,60 +31,61 @@ include 'constants.php';
 /**
  * Action for enqueing scripts
  */
-function nishanthkd_enqueue_style() {
-	wp_enqueue_style('bootstrap-css', get_template_directory_uri() . '/dist/lib/css/bootstrap.min.css');
-	wp_enqueue_style('style', get_template_directory_uri() . '/style.css');
+if ( ! function_exists('paranoid_enqueue_style')) {
+	function paranoid_enqueue_style() {
+		wp_enqueue_style('bootstrap-css', get_template_directory_uri() . '/dist/lib/css/bootstrap.min.css');
+		wp_enqueue_style('style', get_template_directory_uri() . '/style.css');
+	}
+}
+if ( ! function_exists('paranoid_enqueue_style')) {
+	function paranoid_enqueue_script() {
+		wp_enqueue_script('bootstrap-js', get_template_directory_uri() . '/dist/lib/js/bootstrap.min.js');
+		wp_enqueue_script('main-js', get_template_directory_uri() . '/main.js');
+	}
 }
 
-function nishanthkd_enqueue_script() {
-	wp_enqueue_script('bootstrap-js', get_template_directory_uri() . '/dist/lib/js/bootstrap.min.js');
-	wp_enqueue_script('main-js', get_template_directory_uri() . '/main.js');
-}
+add_action('wp_enqueue_scripts', 'paranoid_enqueue_style');
+add_action('wp_enqueue_scripts', 'paranoid_enqueue_script');
 
-add_action('wp_enqueue_scripts', 'nishanthkd_enqueue_style');
-add_action('wp_enqueue_scripts', 'nishanthkd_enqueue_script');
-
-
-
-if ( ! function_exists('nishanthkd_var_color')) {
-	function nishanthkd_var_color( $color = NULL )
+if ( ! function_exists('paranoid_var_color')) {
+	function paranoid_var_color( $color = NULL )
 	{
 	    static $internal;
-
 	    if ($color!==NULL)
 	    {
 	        $internal = $color;
 	    }
-
 	    return $internal;
 	}
 }
 
-if ( ! function_exists( 'nishanthkd_comment_nav' ) ) :
-/**
- * Display navigation to next/previous comments when applicable.
- *
- * @since Twenty Fifteen 1.0
- */
-function nishanthkd_comment_nav() {
-	// Are there comments to navigate through?
-	if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) :
-	?>
-	<nav class="navigation comment-navigation" role="navigation">
-		<h2 class="screen-reader-text"><?php _e( 'Comment navigation', 'nishanthkd' ); ?></h2>
-		<div class="nav-links">
-			<?php
-				if ( $prev_link = get_previous_comments_link( __( 'Older Comments', 'nishanthkd' ) ) ) :
-					printf( '<div class="nav-previous">%s</div>', $prev_link );
-				endif;
+if ( ! function_exists( 'paranoid_comment_nav' ) ) :
+	/**
+	 * Display navigation to next/previous comments when applicable.
+	 *
+	 * @since Twenty Fifteen 1.0
+	 */
+	function paranoid_comment_nav() {
+		// Are there comments to navigate through?
+		if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) :
+		?>
+		<nav class="navigation comment-navigation" role="navigation">
+			<h2 class="screen-reader-text"><?php _e( 'Comment navigation', 'paranoid' ); ?></h2>
+			<div class="nav-links">
+				<?php
+					if ( $prev_link = get_previous_comments_link( __( 'Older Comments', 'paranoid' ) ) ) :
+						printf( '<div class="nav-previous">%s</div>', $prev_link );
+					endif;
 
-				if ( $next_link = get_next_comments_link( __( 'Newer Comments', 'nishanthkd' ) ) ) :
-					printf( '<div class="nav-next">%s</div>', $next_link );
-				endif;
-			?>
-		</div><!-- .nav-links -->
-	</nav><!-- .comment-navigation -->
-	<?php
-	endif;
-}
+					if ( $next_link = get_next_comments_link( __( 'Newer Comments', 'paranoid' ) ) ) :
+						printf( '<div class="nav-next">%s</div>', $next_link );
+					endif;
+				?>
+			</div><!-- .nav-links -->
+		</nav><!-- .comment-navigation -->
+		<?php
+		endif;
+	}
 endif;
+
+add_filter( 'the_generator', '__return_null' );

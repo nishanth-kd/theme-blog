@@ -3,7 +3,7 @@
 <?php 
 	while (have_posts()) {
 		the_post(); 
-		$color = nishanthkd_var_color();
+		$color = paranoid_var_color();
 		?>
 	<div class="container" id="blog-single">
 		<div class="row">
