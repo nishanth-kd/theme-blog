@@ -67,7 +67,7 @@
 @font-face { font-family: "HelveticaNeueLt"; src: url("dist/fonts/HelveticaNeueLt.ttf") format("truetype"); }
 @font-face { font-family: "HelveticaNeueMed"; src: url("dist/fonts/HelveticaNeueMed.ttf") format("truetype"); }
 @font-face { font-family: "HelveticaNeueBd"; src: url("dist/fonts/HelveticaNeueBd.ttf") format("truetype"); }
-.bold { font-weight: bold; }
+.bold { font-family: "HelveticaNeueBd"; }
 
 body { font-family: 'HelveticaNeueLt', Helvetica,Arial,sans-serif; background-color: #fafafa; color: rgba(0, 0, 0, 0.84); }
 
