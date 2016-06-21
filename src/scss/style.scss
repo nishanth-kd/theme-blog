@@ -15,6 +15,7 @@
 @import "colors";
 @import "masonary";
 @import "fonts";
+@import "mixins";
 
 body{
 	font-family: 'HelveticaNeueLt', Helvetica,Arial,sans-serif;
@@ -110,7 +111,7 @@ ol.comment-list,ol.children{
 .sidebar{
 	padding: 2em;
 	width:100%;
-	margin:0.5em 0em;
+	margin: 0.5em 0em 1.5em 0em;
 	color: rgba(0 ,0 ,0 ,0.84);
 	background-color: #fff;
 	border-radius:2px;

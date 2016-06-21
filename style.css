@@ -67,6 +67,8 @@
 @font-face { font-family: "HelveticaNeueLt"; src: url("dist/fonts/HelveticaNeueLt.ttf") format("truetype"); }
 @font-face { font-family: "HelveticaNeueMed"; src: url("dist/fonts/HelveticaNeueMed.ttf") format("truetype"); }
 @font-face { font-family: "HelveticaNeueBd"; src: url("dist/fonts/HelveticaNeueBd.ttf") format("truetype"); }
+.bold { font-weight: bold; }
+
 body { font-family: 'HelveticaNeueLt', Helvetica,Arial,sans-serif; background-color: #fafafa; color: rgba(0, 0, 0, 0.84); }
 
 .thumbnail-photo > img { padding: 2em; width: 100%; }
@@ -98,7 +100,7 @@ ol.comment-list, ol.children { list-style-type: none; margin: 0; }
 
 .form-submit #submit { border: none; margin: 1em 0; padding: 0.5em 1em; border-radius: 5px; font-family: 'HelveticaNeueMed', Helvetica,Arial,sans-serif; }
 
-.sidebar { padding: 2em; width: 100%; margin: 0.5em 0em; color: rgba(0, 0, 0, 0.84); background-color: #fff; border-radius: 2px; font-family: 'HelveticaNeueLt', Helvetica,Arial,sans-serif; box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 1px; }
+.sidebar { padding: 2em; width: 100%; margin: 0.5em 0em 1.5em 0em; color: rgba(0, 0, 0, 0.84); background-color: #fff; border-radius: 2px; font-family: 'HelveticaNeueLt', Helvetica,Arial,sans-serif; box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 1px; }
 
 #navbar-main { padding: 1em; font-size: 1.5em; width: 100%; color: #000; font-weight: bold; cursor: pointer; top: 0; z-index: 1000; }
 #navbar-main > .row { margin: 0px; }
