@@ -37,7 +37,7 @@ if ( ! function_exists('paranoid_enqueue_style')) {
 		wp_enqueue_style('style', get_template_directory_uri() . '/style.css');
 	}
 }
-if ( ! function_exists('paranoid_enqueue_style')) {
+if ( ! function_exists('paranoid_enqueue_script')) {
 	function paranoid_enqueue_script() {
 		wp_enqueue_script('bootstrap-js', get_template_directory_uri() . '/dist/lib/js/bootstrap.min.js');
 		wp_enqueue_script('main-js', get_template_directory_uri() . '/main.js');

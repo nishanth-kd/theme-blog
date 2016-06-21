@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="initial-scale=1">
-        <title>Nishanth KD</title>
+        <title>Paranoid Programmer</title>
         <!--[if lt IE 9]!>
         <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
         <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
@@ -28,7 +28,7 @@
             <div class="row">
                 <a href="<?php echo home_url();?>">
                         <div class="col-x:s-8 company-logo">
-                            <p>NISHANTH<span class="color-<?php echo $color;?>">KD</span> <sup><span>The <span class="color-<?php echo $color;?>">Pragmatic</span> Paranoia</span></sup></p>
+                            <p>NISHANTH<span class="color-<?php echo $color;?>">KD</span> <sup>Paranoid <span class="color-<?php echo $color;?>">Programmer</span></sup></p>
                         </div>
                 </a>
                 <a href="#">
