@@ -28,7 +28,7 @@
             <div class="row">
                 <a href="<?php echo home_url();?>">
                         <div class="col-x:s-8 company-logo">
-                            <p>NISHANTH<span class="color-<?php echo $color;?>">KD</span> <sup>Paranoid <span class="color-<?php echo $color;?>">Programmer</span></sup></p>
+                            <p>The <span class="color-<?php echo $color;?>">Paranoid</span> Programmer</span></p>
                         </div>
                 </a>
                 <a href="#">
