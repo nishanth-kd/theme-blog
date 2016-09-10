@@ -13,7 +13,7 @@
 
         <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,200,700" rel="stylesheet" type="text/css">
 
-        <script src="https://npmcdn.com/masonry-layout@4.0/dist/masonry.pkgd.min.js"></script>
+        <script src="https://unpkg.com/masonry-layout@4.0/dist/masonry.pkgd.min.js"></script>
         <?php 
             do_action('wp_head');
             include_once("analytics-tracking.php");
