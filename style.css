@@ -93,7 +93,11 @@ body { font-family: 'HelveticaNeueLt', Helvetica,Arial,sans-serif; color: rgba(0
 .social-connect .social-button { cursor: pointer; color: #6772e5; font-size: 1.5em; padding: 6px; background-color: #f6f9fc; text-align: center; }
 .social-connect .social-button:hover { opacity: 0.8; }
 
-#reply-title { font-size: 1.5em; font-family: 'HelveticaNeueMed', Helvetica,Arial,sans-serif; margin: 2em 0 1em 0; }
+.comment-respond { background: #fff; box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07); padding: 30px; border-radius: 4px; width: 60%; font-family: CamphorW01-Light, Arial, sans-serif; color: #6b7c93; }
+.comment-respond #reply-title { font-size: 1.3em; font-family: CamphorW01-Medium, Arial, sans-serif; margin-bottom: 1em; color: #32325d; }
+.comment-respond #reply-title span { color: #e25950; }
+.comment-respond .form-submit { text-align: right; }
+.comment-respond #submit { height: 38px; border-radius: 4px; background-color: #45b2e8; font-size: 14px; font-weight: 600; text-transform: uppercase; padding: 0 15px; line-height: 39px; color: #fff; text-align: center; border: none; font-family: CamphorW01-Thin, Arial, sans-serif; }
 
 #comment { resize: none; }
 
@@ -123,10 +127,8 @@ ol.comment-list, ol.children { list-style-type: none; margin: 0; }
 .btn.negative { background-color: #fcfcfc; color: #525252; }
 .btn.negative:hover { background-color: #f2f2f2; color: #525252; }
 
-.form-control { border: none; box-shadow: none; width: 50%; border-radius: 0; border-bottom: 1px solid rgba(0, 0, 0, 0.29804); outline: none; }
-.form-control:focus { outline: none; box-shadow: none; border-color: rgba(0, 0, 0, 0.29804); }
-
-.form-submit #submit { border: none; margin: 1em 0; padding: 0.5em 1em; border-radius: 2px; font-family: 'HelveticaNeueMed', Helvetica,Arial,sans-serif; }
+.form-control { font-family: CamphorW01-Light, sans-serif; z-index: 10; border: 1px solid #cfd3d6; background: none; border-radius: 5px; box-sizing: border-box; -webkit-transition: border-color .3s ease; transition: border-color .3s ease; color: #000; font-size: 1em; line-height: 1.5em; padding: 8px; height: 34px; }
+.form-control:focus { outline: none; box-shadow: none; border-color: #e25950; }
 
 .sidebar { padding: 30px; width: 100%; margin: 0.5em 0em 1.5em 0em; color: rgba(0, 0, 0, 0.84); background-color: #fff; border-radius: 2px; font-family: 'HelveticaNeueLt', Helvetica,Arial,sans-serif; text-align: center; }
 
@@ -159,10 +161,12 @@ ol.comment-list, ol.children { list-style-type: none; margin: 0; }
 #container-404 .title { font-size: 2.5em; }
 
 #blog-single { width: 100%; min-height: 100vh; }
-#blog-single .blog-content { padding: 2em 4em; background-color: #fff; color: #000; margin: 0.5em 0em; margin-bottom: 2em; border-radius: 3px; box-shadow: rgba(0, 0, 0, 0.12157) 0px 4px 4px; }
-#blog-single .blog-content .title { font-family: 'HelveticaNeueMed', Helvetica,Arial,sans-serif; font-size: 3em; text-align: center; padding: 0 10%; }
-#blog-single .blog-content .time { font-family: 'HelveticaNeueBd', Helvetica,Arial,sans-serif; font-size: 1em; text-align: center; font-weight: bold; }
-#blog-single .blog-content .content > p { font-family: 'HelveticaNeueLt', Helvetica,Arial,sans-serif; font-size: 1.2em; text-align: center; line-height: 1.5em; }
+#blog-single .blog-content { padding: 30px; background-color: #fff; color: #000; margin: 0.5em 0em; margin-bottom: 2em; border-radius: 3px; }
+#blog-single .blog-content .title { color: #24b47e; font-family: CamphorW01-Medium, Arial,sans-serif; font-size: 3em; }
+#blog-single .blog-content .time { font-size: 1.2em; margin-bottom: 1em; padding-bottom: 1em; color: #32325d; font-family: CamphorW01-Regular, Arial,sans-serif; }
+#blog-single .blog-content .content p { color: #6b7c93; font-family: CamphorW01-Light, Arial,sans-serif; font-size: 1.2em; line-height: 1.5em; }
+#blog-single .blog-content .content p strong { color: #24b47e; font-family: CamphorW01-Light, Arial,sans-serif; font-size: 1.2em; }
+#blog-single .blog-content .content hr { border-top: 1px solid #f1f7fb; }
 
 a:hover, a:active, a:visited, a:focus { text-decoration: none; }
 

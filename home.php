@@ -6,8 +6,7 @@
 ?>
 
 <?php 
-	get_header(); 
-	$color = paranoid_var_color();
+	get_header();
 ?>
 
 <div class="container" id="blogs-listing">
@@ -21,7 +20,7 @@
 							?>
 							<div class="item col-padding-custom">
 								<a href="<?php echo esc_url(the_permalink());?>">
-									<div class="blog-entry " data-color="<?php $color ?>">
+									<div class="blog-entry">
 										<p class="time"><?php the_time('F j, Y');?></p>
 										<p class="title"><?php the_title();?></p>
 										<?php the_excerpt();?>

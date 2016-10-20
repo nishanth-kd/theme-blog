@@ -1,5 +1,5 @@
 <?php 
-	$color = paranoid_var_color();
+
 ?>
 <div class="sidebar">
 	<div class="thumbnail-photo">

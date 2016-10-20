@@ -3,15 +3,13 @@
 <?php 
 	while (have_posts()) {
 		the_post(); 
-		$color = paranoid_var_color();
 		?>
 	<div class="container" id="blog-single">
 		<div class="row">
 			<div class="col-xs-12 col-sm-7 col-md-9 ">
 				<div class="blog-content">
 					<p class="title"><?php the_title();?></p>
-					<p class="time color-<?php echo $color ?>"><?php the_time('F j, Y');?></p>
-					<hr class="color-<?php echo $color ?>">
+					<p class="time"><?php the_time('F j, Y');?></p>
 					<div class="content">
 						<?php the_content();?>
 					</div>
