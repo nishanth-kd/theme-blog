@@ -1,8 +1,12 @@
-$background-grey: #fafafa;
+$background-grey: #fcfcfc;
+$background-grey-dark: #f2f2f2;
 $font-grey: #525252;
+$font-grey-dark: #484848;
+$font-grey-light: rgba(0, 0, 0, 0.298039);
 
 $font-white: #fff;
 $font-black: #000;
+
 $random-theme-color : red;
 
 $color-1: #16528e;
@@ -33,6 +37,51 @@ $color-7: #795548;
 }
 .color-7{
 	color: $color-7;
+}
+
+.form-control{
+	&.input-color-1{
+		transition: all 0.5s ease-in-out;
+		&:focus{
+			border-color: $color-1;
+		}
+	}
+	&.input-color-2{
+		transition: all 0.5s ease-in-out;
+		&:focus{
+			border-color: $color-2;
+		}
+	}
+	&.input-color-3{
+		transition: all 0.5s ease-in-out;
+		&:focus{
+			border-color: $color-3;
+		}
+	}
+	&.input-color-4{
+		transition: all 0.5s ease-in-out;
+		&:focus{
+			border-color: $color-4;
+		}
+	}
+	&.input-color-5{
+		transition: all 0.5s ease-in-out;
+		&:focus{
+			border-color: $color-5;
+		}
+	}
+	&.input-color-6{
+		transition: all 0.5s ease-in-out;
+		&:focus{
+			border-color: $color-6;
+		}
+	}
+	&.input-color-7{
+		transition: all 0.5s ease-in-out;
+		&:focus{
+			border-color: $color-7;
+		}
+	}
 }
 
 .comment-color-1{

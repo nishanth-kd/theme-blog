@@ -39,6 +39,7 @@ if ( ! function_exists('paranoid_enqueue_style')) {
 }
 if ( ! function_exists('paranoid_enqueue_script')) {
 	function paranoid_enqueue_script() {
+		wp_enqueue_script('jquery-js', get_template_directory_uri() . '/dist/lib/js/jquery-1.11.3.min.js');
 		wp_enqueue_script('bootstrap-js', get_template_directory_uri() . '/dist/lib/js/bootstrap.min.js');
 		wp_enqueue_script('main-js', get_template_directory_uri() . '/main.js');
 	}
@@ -59,7 +60,7 @@ if ( ! function_exists('paranoid_var_color')) {
 	}
 }
 
-if ( ! function_exists( 'paranoid_comment_nav' ) ) :
+if(!function_exists('paranoid_comment_nav')):
 	/**
 	 * Display navigation to next/previous comments when applicable.
 	 *
@@ -67,7 +68,7 @@ if ( ! function_exists( 'paranoid_comment_nav' ) ) :
 	 */
 	function paranoid_comment_nav() {
 		// Are there comments to navigate through?
-		if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) :
+		if(get_comment_pages_count() > 1 && get_option('page_comments')):
 		?>
 		<nav class="navigation comment-navigation" role="navigation">
 			<h2 class="screen-reader-text"><?php _e( 'Comment navigation', 'paranoid' ); ?></h2>
@@ -89,3 +90,37 @@ if ( ! function_exists( 'paranoid_comment_nav' ) ) :
 endif;
 
 add_filter( 'the_generator', '__return_null' );
+
+if (!function_exists('paranoid_contact_mail_form')) : 
+
+	function paranoid_contact_mail_form(){
+		include('contact.php');
+	}
+
+endif;
+
+if (!function_exists('paranoid_contact_mail')):
+
+	function paranoid_contact_mail() {
+
+		$name = $_POST['name'];
+		$email = $_POST['email'];
+		$message = $_POST['message'];
+
+		$content = "You've got a mail from - $email \n\n $message \n\n $name\n";
+
+		try {
+			wp_mail(WP_ADMIN_MAIL, "You've got Mail !!!", $message);
+			echo "true";
+		} catch (Exception $e) {
+			echo "false";
+		}
+
+		wp_die();
+
+	}
+
+	add_action('wp_ajax_contact_mail', 'paranoid_contact_mail');
+	add_action('wp_ajax_nopriv_contact_mail', 'paranoid_contact_mail');
+
+endif;

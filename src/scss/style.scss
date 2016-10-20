@@ -19,7 +19,6 @@
 
 body{
 	font-family: 'HelveticaNeueLt', Helvetica,Arial,sans-serif;
-	background-color : #fafafa;
 	color: rgba(0 ,0 ,0 ,0.84);
 }
 
@@ -31,12 +30,21 @@ body{
 }
 .social-connect{
 	text-align:center;
-	display:block;
+	display:inline-block;
+	background-color : #f6f9fc; 
+	padding: 15px;
+	border-radius:4px;
+
 	.social-button{
-		&>img{
-			width: 2em;
-			margin: 0.25em;
-		}
+		cursor: pointer;
+		color: #6772e5;
+	    font-size: 1.5em;
+	    padding: 6px;
+	    background-color : #f6f9fc; 
+	    text-align: center;
+	    &:hover{
+	    	opacity:0.8;
+	    }
 	}
 }
 
@@ -46,9 +54,11 @@ body{
 	font-family: 'HelveticaNeueMed', Helvetica,Arial,sans-serif;
 	margin: 2em 0 1em 0;
 }
+
 #comment{
 	resize:none;
 }
+
 .comment-form-comment,.comment-form-author,.comment-form-email,.comment-form-url{
 	font-family: 'HelveticaNeueLt', Helvetica,Arial,sans-serif;
 	label{
@@ -84,16 +94,53 @@ ol.comment-list,ol.children{
 .comment{
 	margin: 1em 0;
 }
+.modal-content {
+	box-shadow: rgba(0, 0, 0, 0.247059) 0px 14px 45px, rgba(0, 0, 0, 0.219608) 0px 10px 18px;
+    border-radius: 2px;
+    background-color: rgb(255, 255, 255);
+	font-family: 'HelveticaNeueLt', Helvetica,Arial,sans-serif;
+	.modal-header{
+		font-family: 'HelveticaNeueMed', Helvetica,Arial,sans-serif;
+		color: $font-grey-dark;
+	}
+	.modal-body {
+		color: $font-grey;
+	}
+	.modal-body, .modal-header, .modal-footer{
+		border:none;
+	}
+	.form-control{
+		width:100%;
+	}
+}
+.btn {
+	border: none;
+    padding: 0.5em 1em;
+    border-radius: 2px;
+    font-family: 'HelveticaNeueMed', Helvetica,Arial,sans-serif;
+	&:hover{
+		color: $font-white;
+	}
+	&.negative{
+		background-color: $background-grey;
+		color: $font-grey;
+		&:hover{
+			background-color: $background-grey-dark;
+			color: $font-grey;
+		}
+	}
+}
 .form-control{
 	border: none;
     box-shadow: none;
     width: 50%;
     border-radius: 0;
-    border-bottom: 2px dashed;
+    border-bottom: 1px solid $font-grey-light;
     outline: none;
     &:focus{
     	outline: none;
-    	background-color:#fafafa;
+    	box-shadow: none;
+    	border-color: $font-grey-light;
     }
 }
 .form-submit{
@@ -103,24 +150,25 @@ ol.comment-list,ol.children{
 	    margin:1em 0;
 	    padding: 0.5em 1em;
 	    //color: #fff;
-	    border-radius: 5px;
+	    border-radius: 2px;
 	    font-family: 'HelveticaNeueMed', Helvetica,Arial,sans-serif;
 	}
 }
 
 .sidebar{
-	padding: 2em;
+	padding: 30px;
 	width:100%;
 	margin: 0.5em 0em 1.5em 0em;
 	color: rgba(0 ,0 ,0 ,0.84);
 	background-color: #fff;
 	border-radius:2px;
 	font-family: 'HelveticaNeueLt', Helvetica,Arial,sans-serif;
-	box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 1px;
+	text-align: center;
 }
 
-#navbar-main{
-	padding: 1em;
+#navbar-main {
+	padding: 30px;
+	background-color: #fff;
 	font-size:1.5em;
 	width:100%;
 	color: $font-black;
@@ -148,6 +196,20 @@ ol.comment-list,ol.children{
 		font-family: 'HelveticaNeueMed', Helvetica,Arial,sans-serif;
 		font-size: 1.5em;
 		font-weight: bold;
+		padding:0;
+		&>p{
+			color: #cfd7df;
+    		display: inline-block;
+    		font-family: CamphorW01-Thin, sans-serif;
+    		span.programming{
+				color: #32325d;
+				font-family: CamphorW01-Light, sans-serif;
+    		}
+    		span.paranoia{
+				color: #6772e5;
+				font-family: CamphorW01-Medium, sans-serif;
+    		}
+		}
 		sup{
 			font-family: 'HelveticaNeueLt', Helvetica,Arial,sans-serif;
 		}
@@ -177,31 +239,42 @@ ol.comment-list,ol.children{
 	width:100%;
 	overflow-y: scroll;
 	.blog-entry{
-		padding: 2em;
 		width:100%;
-		margin:0.5em 0em;
+		margin-top: 0.5em;
+		margin-bottom: 1.5em;
 		color: rgba(0 ,0 ,0 ,0.84);
-		background-color: #fff;
-		border-radius:2px;
   		transition: all 0.2s ease-in-out;
-  		font-family: 'HelveticaNeueLt', Helvetica,Arial,sans-serif;
   		box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 1px;
+	    background-color: #fff;
+	    border-radius: 4px;
+	    padding: 30px;
+	    box-shadow: 0 15px 35px rgba(50,50,93,.1),0 5px 15px rgba(0,0,0,.07);
+	    color: #6b7c93;
+		font-family: CamphorW01-Thin, sans-serif;
   		.title{
-  			font-family: 'HelveticaNeueMed', Helvetica,Arial,sans-serif;
-			font-size: 3em;
+			font-size: 2.5em;
 			font-weight: bold;
 			margin-bottom: 0.5em;
+			color:#32325d;
+			font-family: CamphorW01-Light, Arial,sans-serif;
   		}
   		.time{
   			font-weight: bold;
-			font-size: 1.5em;
-  		}
-  		.excerpt{
-			font-size: 1.5em;
+			font-size: 1.2em;
+			font-family: CamphorW01-Thin, Arial, sans-serif;
+			color: #6772e5;
   		}
   		&:hover{
   			text-decoration: none;
   			box-shadow: rgba(0, 0, 0, 0.4) 0px 1px 4px;
+  		}
+  		p.read-more {
+  			font-size: 1.2em;
+  			font-family: CamphorW01-Light, Arial,sans-serif;
+  			color: #6772e5;
+  			&:hover {
+  				opacity: 1; 
+  			}
   		}
 	}
 }
@@ -288,5 +361,3 @@ a:hover, a:active, a:visited, a:focus{
 		    position: relative;
 		}
 	}
-
-	

@@ -1,1 +1,2 @@
-/*! nishanthkd-blog-theme 2016-06-23 */
+/*! nishanthkd-blog-theme 2016-10-20 */
+function submit(a){$.ajax({type:"POST",url:ajaxurl,data:getFormData(a),success:function(a){console.log(a)}})}function getFormData(a){return a.serialize()}function validate(a,b){b(a)}$(document).ready(function(){$("body").on("click",".dynamic-form-submit",function(){var a=$("#"+$(this).attr("data-form"));validate(a,submit)})});

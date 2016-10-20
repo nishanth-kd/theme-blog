@@ -39,13 +39,13 @@
 	$fields =  array(
 
 	  'author' =>
-	    '<p class="comment-form-author"><label for="author" class="color-'.$color.'">' . __( 'Name*', 'domainreference' ) . '</label> ' .
-	    '<input id="author" name="author" class="form-control" type="text" value="' . esc_attr( $commenter['comment_author'] ) .
+	    '<p class="comment-form-author"><label for="author" class="color-' . $color . '">' . __( 'Name*', 'domainreference' ) . '</label> ' .
+	    '<input id="author" name="author" class="form-control input-color-' . $color . '" type="text" value="' . esc_attr( $commenter['comment_author'] ) .
 	    '" size="30"' . $aria_req . ' /></p>',
 
 	  'email' =>
-	    '<p class="comment-form-email"><label for="email" class="color-'.$color.'">' . __( 'Email*', 'domainreference' ) . '</label> ' .
-	    '<input id="email" name="email" class="form-control" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) .
+	    '<p class="comment-form-email"><label for="email" class="color-' . $color . '">' . __( 'Email*', 'domainreference' ) . '</label> ' .
+	    '<input id="email" name="email" class="form-control input-color-' . $color . '" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) .
 	    '" size="30"' . $aria_req . ' /></p>',
 	);
 
@@ -62,8 +62,8 @@
 	  'class_submit'      => __( 'background-color-'.$color ),
 	  'format'            => 'xhtml',
 
-	  'comment_field' =>  '<p class="comment-form-comment"><label for="comment" class="color-'.$color.'">' . _x( 'Thought*', 'noun' ) .
-	    '</label><textarea id="comment" class="form-control" name="comment" cols="45" rows="3" aria-required="true">' .
+	  'comment_field' =>  '<p class="comment-form-comment"><label for="comment" class="color-' . $color . '">' . _x( 'Thought*', 'noun' ) .
+	    '</label><textarea id="comment" class="form-control input-color-' . $color . '" name="comment" cols="45" rows="3" aria-required="true">' .
 	    '</textarea></p>',
 
 	  'must_log_in' => '<p class="must-log-in">' .
@@ -74,7 +74,7 @@
 
 	  'logged_in_as' => '<p class="logged-in-as">' .
 	    sprintf(
-	    __( 'Logged in as <a class="color-'.$color.'" href="%1$s">%2$s</a>. <a href="%3$s" title="Log out of this account">Log out?</a>' ),
+	    __( 'Logged in as <a class="color-' . $color . '" href="%1$s">%2$s</a>. <a href="%3$s" title="Log out of this account">Log out?</a>' ),
 	      admin_url( 'profile.php' ),
 	      $user_identity,
 	      wp_logout_url( apply_filters( 'the_permalink', get_permalink( ) ) )

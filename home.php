@@ -25,7 +25,7 @@
 										<p class="time"><?php the_time('F j, Y');?></p>
 										<p class="title"><?php the_title();?></p>
 										<?php the_excerpt();?>
-										<p class="color-<?php echo $color;?>">Read More ...</p>
+										<p class="read-more">READ MORE<p>
 									</div>
 								</a>
 							</div>
