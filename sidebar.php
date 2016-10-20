@@ -2,9 +2,9 @@
 
 ?>
 <div class="sidebar">
-	<div class="thumbnail-photo">
+	<!-- <div class="thumbnail-photo">
 		<img src="<?php bloginfo('template_directory');?>/dist/img/thumbnail.png" alt="" class="">
-	</div>
+	</div> -->
 	<div class="social-connect">
 		<a href="#" class="social-button">
 			<i class="fa fa-btn fa-rss"></i>

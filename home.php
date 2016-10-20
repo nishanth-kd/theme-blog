@@ -8,7 +8,6 @@
 <?php 
 	get_header();
 ?>
-
 <div class="container" id="blogs-listing">
 	<div class="row">
 		<div class="col-xs-12 col-sm-7 col-md-9">

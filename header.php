@@ -17,6 +17,7 @@
         <link href="//db.onlinewebfonts.com/c/4dbaa3adcaa1e0b2b87ff13dabcf5bfb?family=CamphorW01-Medium" rel="stylesheet" type="text/css">
         <link href="//db.onlinewebfonts.com/c/fb4b3fc0253f9898cdcb1b7ad0898477?family=CamphorW01-Thin" rel="stylesheet" type="text/css">
 
+         <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
         <script src="https://npmcdn.com/masonry-layout@4.0/dist/masonry.pkgd.min.js"></script>
         <script type="text/javascript">
             var ajaxurl = '<?php echo admin_url('admin-ajax.php'); ?>';
@@ -37,10 +38,13 @@
                         </div>
                         
                 </a>
-                <a href="#">
                         <div class="col-xs-4 menu">
-                            
+                                <div class="music-player">
+                                    <i class="fa fa-btn fa-play-circle"></i>
+                                </div>
                         </div>
                 </a>
             </div>
         </div>
+        <audio id="audioElement" src="<?php bloginfo('template_directory');?>/riverside-back-to-the-river.mp3"></audio>
+        <div class="banner"></div>
